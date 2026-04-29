@@ -1,0 +1,22 @@
+appId: plot-twist
+productName: plot-twist
+artifactName: plot-twist-setup.${ext}
+copyright: Copyright © 2026 plot-twist
+asar: true
+compression: maximum
+files:
+  - "!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,eslint.config.mjs}"
+extraResources:
+  - libraries
+win:
+  target:
+    - target: nsis
+      arch: x64
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+directories:
+  buildResources: build
+  output: dist
